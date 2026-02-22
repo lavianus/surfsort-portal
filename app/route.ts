@@ -8,7 +8,7 @@ const html = `<!DOCTYPE html>
 <title>SurfSort — Sort Fast. Deliver Faster.</title>
 <meta name="description" content="Stop wasting hours organizing footage after every trip. One keystroke per file. Every surfer gets their folder. You get back in the water.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
   --lime:    #90BE6D;
@@ -33,14 +33,14 @@ body {
   color: var(--white);
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
+  font-size: 17px;
   overflow-x: hidden;
   cursor: default;
 }
 
 h1, h2, h3, h4, .label {
   font-family: 'Barlow Condensed', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
 }
 
 /* ── NAV ───────────────────────────────────────────── */
@@ -57,8 +57,8 @@ nav {
 }
 .nav-logo-name {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px; font-weight: 900;
-  letter-spacing: 1px; text-transform: uppercase;
+  font-size: 22px; font-weight: 500;
+  letter-spacing: 0.5px;
   color: var(--white);
 }
 .nav-logo-sep {
@@ -67,8 +67,8 @@ nav {
 }
 .nav-logo-sub {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700;
-  letter-spacing: 3px; text-transform: uppercase;
+  font-size: 13px; font-weight: 400;
+  letter-spacing: 1px;
   color: var(--lime);
 }
 .nav-links {
@@ -76,15 +76,15 @@ nav {
   list-style: none;
 }
 .nav-links a {
-  font-size: 11px; font-weight: 600; letter-spacing: 2px;
-  text-transform: uppercase; color: var(--sub);
+  font-size: 15px; font-weight: 400; letter-spacing: 0;
+  color: var(--sub);
   text-decoration: none; transition: color .15s;
 }
 .nav-links a:hover { color: var(--white); }
 .nav-cta {
   background: var(--lime); color: var(--black) !important;
-  padding: 8px 20px; font-size: 11px !important;
-  font-weight: 900 !important; letter-spacing: 2px !important;
+  padding: 8px 20px; font-size: 15px !important;
+  font-weight: 500 !important; letter-spacing: 0 !important;
   transition: background .15s !important;
 }
 .nav-cta:hover { background: #a8d484 !important; }
@@ -111,8 +111,8 @@ nav {
 }
 .hero-eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 4px;
-  color: var(--lime); text-transform: uppercase;
+  font-size: 14px; font-weight: 400; letter-spacing: 1px;
+  color: var(--lime);
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 20px;
 }
@@ -122,13 +122,13 @@ nav {
 }
 .hero h1 {
   font-size: clamp(64px, 8vw, 96px);
-  font-weight: 900; line-height: 0.95;
-  letter-spacing: -2px;
+  font-weight: 500; line-height: 0.95;
+  letter-spacing: -1px;
   margin-bottom: 28px;
 }
 .hero h1 span { color: var(--lime); }
 .hero-sub {
-  font-size: 15px; color: var(--sub2); line-height: 1.8;
+  font-size: 18px; color: var(--sub2); line-height: 1.8;
   max-width: 420px; margin-bottom: 44px;
   font-weight: 300;
 }
@@ -136,16 +136,16 @@ nav {
 .btn-primary {
   background: var(--lime); color: var(--black);
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px; font-weight: 900; letter-spacing: 3px;
-  text-transform: uppercase; text-decoration: none;
+  font-size: 16px; font-weight: 500; letter-spacing: 0;
+  text-decoration: none;
   padding: 16px 40px; display: inline-block;
   transition: background .15s;
 }
 .btn-primary:hover { background: #a8d484; }
 .btn-secondary {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--sub);
+  font-size: 14px; font-weight: 400; letter-spacing: 0;
+  color: var(--sub);
   text-decoration: none; transition: color .15s;
   display: flex; align-items: center; gap: 8px;
 }
@@ -176,8 +176,8 @@ nav {
 }
 .mock-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 3px;
-  color: var(--sub); text-transform: uppercase;
+  font-size: 11px; font-weight: 400; letter-spacing: 0.5px;
+  color: var(--sub);
 }
 .mock-body {
   display: grid; grid-template-columns: 1fr 200px;
@@ -188,12 +188,6 @@ nav {
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
 }
-.mock-canvas-img {
-  width: 100%; height: 100%; object-fit: cover;
-  opacity: 0.7;
-  background: linear-gradient(135deg, #0d2040 0%, #082030 40%, #041020 100%);
-}
-/* Fake wave image with CSS */
 .wave-visual {
   width: 100%; height: 100%;
   background:
@@ -222,8 +216,8 @@ nav {
 }
 .mock-sb-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 8px; font-weight: 700; letter-spacing: 3px;
-  color: var(--sub); text-transform: uppercase;
+  font-size: 10px; font-weight: 400; letter-spacing: 0.5px;
+  color: var(--sub);
   margin-bottom: 10px;
 }
 .mock-bucket {
@@ -236,11 +230,11 @@ nav {
   width: 24px; height: 24px; border-radius: 5px;
   background: var(--border); display: flex; align-items: center;
   justify-content: center; font-family: monospace;
-  font-size: 11px; font-weight: 700; flex-shrink: 0;
+  font-size: 11px; font-weight: 500; flex-shrink: 0;
 }
 .mock-bucket.active .mock-key { background: var(--lime); color: var(--black); }
-.mock-bucket-name { font-size: 11px; font-weight: 500; flex: 1; }
-.mock-bucket.active .mock-bucket-name { font-weight: 700; }
+.mock-bucket-name { font-size: 11px; font-weight: 400; flex: 1; }
+.mock-bucket.active .mock-bucket-name { font-weight: 500; }
 .mock-bucket-cnt { font-size: 10px; color: var(--sub); }
 
 /* Progress bar */
@@ -258,7 +252,7 @@ nav {
 .strip {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 16px 60px;
+  padding: 18px 60px;
   display: flex; align-items: center; gap: 0;
   overflow: hidden;
 }
@@ -270,13 +264,13 @@ nav {
 .strip-item:first-child { padding-left: 0; }
 .strip-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--sub);
+  font-size: 13px; font-weight: 400; letter-spacing: 0.5px;
+  color: var(--sub);
 }
 .strip-value {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--white);
+  font-size: 15px; font-weight: 500; letter-spacing: 0;
+  color: var(--white);
 }
 .strip-dot { width: 6px; height: 6px; background: var(--lime); border-radius: 50%; }
 
@@ -290,22 +284,22 @@ nav {
 
 .eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 4px;
-  text-transform: uppercase; color: var(--lime);
+  font-size: 14px; font-weight: 400; letter-spacing: 1px;
+  color: var(--lime);
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 16px;
 }
 .eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--lime); display: block; }
 
 .section-title {
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 900; line-height: 1.0;
-  letter-spacing: -1px;
+  font-size: clamp(42px, 5vw, 66px);
+  font-weight: 500; line-height: 1.0;
+  letter-spacing: -0.5px;
   margin-bottom: 16px;
 }
 .section-title span { color: var(--lime); }
 .section-desc {
-  font-size: 15px; color: var(--sub2); line-height: 1.8;
+  font-size: 18px; color: var(--sub2); line-height: 1.8;
   max-width: 480px; font-weight: 300;
 }
 
@@ -322,16 +316,16 @@ nav {
 }
 .step-num {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 72px; font-weight: 900;
+  font-size: 72px; font-weight: 500;
   color: var(--border2); line-height: 1;
   margin-bottom: 20px; letter-spacing: -2px;
 }
 .step-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px; font-weight: 800; letter-spacing: 1px;
-  text-transform: uppercase; margin-bottom: 10px;
+  font-size: 22px; font-weight: 500; letter-spacing: 0;
+  margin-bottom: 10px;
 }
-.step-desc { font-size: 13px; color: var(--sub); line-height: 1.7; font-weight: 300; }
+.step-desc { font-size: 16px; color: var(--sub); line-height: 1.7; font-weight: 300; }
 .step-accent {
   position: absolute; top: 0; left: 0; right: 0;
   height: 2px; background: var(--border2);
@@ -360,10 +354,10 @@ nav {
 }
 .feature-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px; font-weight: 800; letter-spacing: 1.5px;
-  text-transform: uppercase; margin-bottom: 10px;
+  font-size: 20px; font-weight: 500; letter-spacing: 0;
+  margin-bottom: 10px;
 }
-.feature-desc { font-size: 13px; color: var(--sub); line-height: 1.7; font-weight: 300; }
+.feature-desc { font-size: 16px; color: var(--sub); line-height: 1.7; font-weight: 300; }
 
 /* ── KEYBOARD ────────────────────────────────────────── */
 .keyboard-section {
@@ -378,21 +372,20 @@ nav {
 .shortcut-row {
   display: flex; align-items: center; gap: 0;
   border-bottom: 1px solid var(--border);
-  padding: 14px 20px;
+  padding: 16px 20px;
 }
 .shortcut-row:last-child { border-bottom: none; }
 .shortcut-key {
   font-family: 'Courier New', monospace;
-  font-size: 12px; font-weight: 700; color: var(--lime);
+  font-size: 14px; font-weight: 500; color: var(--lime);
   background: var(--deep); border: 1px solid var(--border2);
-  padding: 4px 10px; min-width: 60px; text-align: center;
-  letter-spacing: 1px;
+  padding: 4px 10px; min-width: 64px; text-align: center;
+  letter-spacing: 0;
 }
 .shortcut-desc {
-  font-size: 13px; color: var(--sub2); margin-left: 20px;
+  font-size: 16px; color: var(--sub2); margin-left: 20px;
   font-weight: 300;
 }
-.shortcut-row:first-child .shortcut-key { color: var(--lime); }
 
 /* Keyboard visual */
 .keys-visual {
@@ -400,18 +393,18 @@ nav {
   margin-top: 40px;
 }
 .key-cap {
-  width: 48px; height: 48px; background: var(--surface);
+  width: 52px; height: 52px; background: var(--surface);
   border: 1px solid var(--border2); border-bottom: 3px solid var(--border2);
   border-radius: 6px; display: flex; align-items: center; justify-content: center;
-  font-family: 'Barlow Condensed', sans-serif; font-size: 14px;
-  font-weight: 700; color: var(--sub); transition: all .15s;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 17px;
+  font-weight: 500; color: var(--sub); transition: all .15s;
   cursor: default;
 }
 .key-cap.active {
   background: var(--lime); color: var(--black);
   border-color: #6a9050; border-bottom-color: #4a7030;
 }
-.key-cap.wide { width: 72px; }
+.key-cap.wide { width: 80px; }
 
 /* ── PRICING ─────────────────────────────────────────── */
 .pricing-section {
@@ -431,36 +424,36 @@ nav {
 .pricing-body { padding: 56px; }
 .pricing-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 4px;
-  text-transform: uppercase; color: var(--lime); margin-bottom: 20px;
+  font-size: 14px; font-weight: 400; letter-spacing: 1px;
+  color: var(--lime); margin-bottom: 20px;
 }
 .pricing-price {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 80px; font-weight: 900; line-height: 1;
+  font-size: 88px; font-weight: 500; line-height: 1;
   letter-spacing: -3px; color: var(--white); margin-bottom: 4px;
 }
-.pricing-price sup { font-size: 32px; vertical-align: top; margin-top: 14px; letter-spacing: 0; }
+.pricing-price sup { font-size: 36px; vertical-align: top; margin-top: 14px; letter-spacing: 0; }
 .pricing-cadence {
-  font-size: 13px; color: var(--sub); margin-bottom: 40px;
+  font-size: 16px; color: var(--sub); margin-bottom: 40px;
 }
 .pricing-divider { height: 1px; background: var(--border); margin-bottom: 40px; }
 .pricing-features {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 14px; text-align: left; margin-bottom: 48px;
+  gap: 16px; text-align: left; margin-bottom: 48px;
 }
 .pricing-feature {
   display: flex; align-items: flex-start; gap: 12px;
-  font-size: 13px; color: var(--sub2); font-weight: 300; line-height: 1.5;
+  font-size: 16px; color: var(--sub2); font-weight: 300; line-height: 1.5;
 }
 .pricing-feature::before {
   content: '';
-  width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px;
+  width: 14px; height: 14px; flex-shrink: 0; margin-top: 3px;
   background: var(--lime);
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 .trial-note {
   margin-top: 20px;
-  font-size: 12px; color: var(--sub); letter-spacing: 1px;
+  font-size: 14px; color: var(--sub); letter-spacing: 0;
 }
 .trial-note strong { color: var(--lime); }
 
@@ -473,19 +466,19 @@ nav {
 }
 .founder-quote {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 700; line-height: 1.3;
-  letter-spacing: -0.5px; margin-bottom: 32px;
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 500; line-height: 1.3;
+  letter-spacing: 0; margin-bottom: 32px;
   padding-left: 28px;
   border-left: 3px solid var(--lime);
 }
 .founder-name {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--white);
+  font-size: 17px; font-weight: 500; letter-spacing: 0.5px;
+  color: var(--white);
 }
 .founder-role {
-  font-size: 12px; color: var(--sub); margin-top: 4px;
+  font-size: 15px; color: var(--sub); margin-top: 4px;
 }
 .founder-stats {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -497,13 +490,13 @@ nav {
 }
 .founder-stat-val {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 48px; font-weight: 900; line-height: 1;
+  font-size: 56px; font-weight: 500; line-height: 1;
   letter-spacing: -2px; color: var(--lime); margin-bottom: 6px;
 }
 .founder-stat-lbl {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--sub);
+  font-size: 13px; font-weight: 400; letter-spacing: 0.5px;
+  color: var(--sub);
 }
 
 /* ── CTA FINAL ───────────────────────────────────────── */
@@ -518,35 +511,35 @@ nav {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 240px; font-weight: 900; letter-spacing: -8px;
+  font-size: 240px; font-weight: 600; letter-spacing: -8px;
   color: rgba(0,0,0,0.06); white-space: nowrap;
   pointer-events: none; user-select: none;
 }
 .cta-eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px; font-weight: 700; letter-spacing: 4px;
-  text-transform: uppercase; color: rgba(0,0,0,0.5);
+  font-size: 14px; font-weight: 400; letter-spacing: 1px;
+  color: rgba(0,0,0,0.5);
   margin-bottom: 16px;
 }
 .cta-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(48px, 7vw, 88px);
-  font-weight: 900; line-height: 0.95;
-  letter-spacing: -2px; color: var(--black);
-  margin-bottom: 32px; text-transform: uppercase;
+  font-size: clamp(50px, 7vw, 90px);
+  font-weight: 500; line-height: 0.95;
+  letter-spacing: -1px; color: var(--black);
+  margin-bottom: 32px;
 }
 .btn-dark {
   background: var(--black); color: var(--white);
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px; font-weight: 900; letter-spacing: 3px;
-  text-transform: uppercase; text-decoration: none;
+  font-size: 16px; font-weight: 500; letter-spacing: 0;
+  text-decoration: none;
   padding: 16px 48px; display: inline-block;
   transition: background .15s; position: relative;
 }
 .btn-dark:hover { background: #1a1a2e; }
 .cta-sub {
-  margin-top: 20px; font-size: 12px;
-  color: rgba(0,0,0,0.5); letter-spacing: 1px;
+  margin-top: 20px; font-size: 15px;
+  color: rgba(0,0,0,0.5); letter-spacing: 0;
 }
 
 /* ── FOOTER ─────────────────────────────────────────── */
@@ -561,26 +554,26 @@ footer {
 }
 .footer-logo-name {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px; font-weight: 900; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--white);
+  font-size: 18px; font-weight: 500; letter-spacing: 0.5px;
+  color: var(--white);
 }
 .footer-logo-sep { width: 1px; height: 14px; background: var(--slate); margin: 0 12px; }
 .footer-logo-sub {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--lime);
+  font-size: 13px; font-weight: 400; letter-spacing: 1px;
+  color: var(--lime);
 }
 .footer-links {
   display: flex; gap: 32px; list-style: none;
 }
 .footer-links a {
-  font-size: 10px; font-weight: 600; letter-spacing: 2px;
-  text-transform: uppercase; color: var(--sub);
+  font-size: 14px; font-weight: 400; letter-spacing: 0;
+  color: var(--sub);
   text-decoration: none; transition: color .15s;
 }
 .footer-links a:hover { color: var(--white); }
 .footer-copy {
-  font-size: 10px; color: var(--sub); letter-spacing: 1px;
+  font-size: 13px; color: var(--sub); letter-spacing: 0;
 }
 
 /* ── ANIMATIONS ─────────────────────────────────────── */
@@ -617,7 +610,7 @@ footer {
   <div class="hero-grid">
     <div>
       <div class="hero-eyebrow">For surf photographers &amp; cinematographers</div>
-      <h1>SORT FAST.<br><span>DELIVER</span><br>FASTER.</h1>
+      <h1>Sort Fast.<br><span>Deliver</span><br>Faster.</h1>
       <p class="hero-sub">
         Stop wasting hours organizing footage after every trip.
         One keystroke per file. Every surfer gets their folder.
@@ -638,7 +631,7 @@ footer {
             <div class="mock-dot"></div>
             <div class="mock-dot"></div>
           </div>
-          <div class="mock-title">SURFSORT — MENTAWAI 2026 · HT'S</div>
+          <div class="mock-title">SurfSort — Mentawai 2026 · HT's</div>
           <div style="width:60px;"></div>
         </div>
         <div class="mock-body">
@@ -669,8 +662,8 @@ footer {
               <div class="mock-bucket-cnt">7</div>
             </div>
             <div style="margin-top:auto; padding-top:12px; border-top:1px solid var(--border);">
-              <div style="font-size:9px;color:var(--sub);letter-spacing:2px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;margin-bottom:6px;">Session Time</div>
-              <div style="font-family:monospace;font-size:14px;font-weight:700;color:var(--lime);">18m 42s</div>
+              <div style="font-size:10px;color:var(--sub);letter-spacing:0.5px;font-family:'Barlow Condensed',sans-serif;margin-bottom:6px;">Session Time</div>
+              <div style="font-family:monospace;font-size:14px;font-weight:500;color:var(--lime);">18m 42s</div>
             </div>
           </div>
         </div>
@@ -711,7 +704,7 @@ footer {
 <div id="how">
 <div class="section">
   <div class="eyebrow">How it works</div>
-  <h2 class="section-title">FOUR STEPS.<br><span>ZERO FRICTION.</span></h2>
+  <h2 class="section-title">Four Steps.<br><span>Zero Friction.</span></h2>
   <p class="section-desc">From raw footage to organized delivery in a single workflow. No dragging. No clicking. Just keys.</p>
 
   <div class="steps">
@@ -747,7 +740,7 @@ footer {
 <div id="features" class="features-bg">
 <div class="section">
   <div class="eyebrow">Features</div>
-  <h2 class="section-title">BUILT FOR THE REAL<br><span>WORKFLOW.</span></h2>
+  <h2 class="section-title">Built for the Real<br><span>Workflow.</span></h2>
   <p class="section-desc">Every feature exists because a photographer on a trip needed it.</p>
 
   <div class="features-grid">
@@ -819,7 +812,7 @@ footer {
 <div class="keyboard-section">
   <div>
     <div class="eyebrow">Keyboard-first</div>
-    <h2 class="section-title">EVERY ACTION.<br><span>ONE KEY.</span></h2>
+    <h2 class="section-title">Every Action.<br><span>One Key.</span></h2>
     <p class="section-desc" style="margin-bottom:0;">SurfSort is designed so your hands never leave the keyboard. Every action has a shortcut.</p>
 
     <div class="shortcuts-table">
@@ -852,7 +845,7 @@ footer {
 
   <div>
     <div class="eyebrow">Built for speed</div>
-    <h2 class="section-title">10 SURFERS.<br><span>10 KEYS.</span></h2>
+    <h2 class="section-title">10 Surfers.<br><span>10 Keys.</span></h2>
     <p class="section-desc">One keystroke per file. A photographer can sort 400+ photos in under 10 minutes.</p>
 
     <div class="keys-visual">
@@ -874,8 +867,8 @@ footer {
     </div>
 
     <div style="margin-top:32px;padding:20px 24px;border:1px solid var(--border);border-left:3px solid var(--lime);background:var(--deep);">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:6px;">Pro tip</div>
-      <div style="font-size:13px;color:var(--sub2);line-height:1.7;font-weight:300;">Edit any shortcut mid-session without interrupting your workflow. Press ⌃N to add a surfer anytime.</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.5px;color:var(--lime);margin-bottom:6px;">Pro tip</div>
+      <div style="font-size:16px;color:var(--sub2);line-height:1.7;font-weight:300;">Edit any shortcut mid-session without interrupting your workflow. Press ⌃N to add a surfer anytime.</div>
     </div>
   </div>
 </div>
@@ -884,7 +877,7 @@ footer {
 <div id="pricing" class="pricing-section">
   <div class="pricing-inner">
     <div class="eyebrow" style="justify-content:center;">Pricing</div>
-    <h2 class="section-title" style="text-align:center;">SIMPLE.<br><span>NO SURPRISES.</span></h2>
+    <h2 class="section-title" style="text-align:center;">Simple.<br><span>No Surprises.</span></h2>
     <p class="section-desc" style="text-align:center;margin:0 auto;">One plan. Everything included. Cancel anytime.</p>
 
     <div class="pricing-card">
@@ -920,11 +913,11 @@ footer {
     </blockquote>
     <div class="founder-name">Raphael "Lime"</div>
     <div class="founder-role">Filmmaker · Surf Cinematographer · Founder, Lime Studio</div>
-    <div style="margin-top:24px;font-size:13px;color:var(--sub);line-height:1.8;font-weight:300;max-width:420px;">
+    <div style="margin-top:24px;font-size:16px;color:var(--sub);line-height:1.8;font-weight:300;max-width:420px;">
       With a background spanning cinema, documentary, and surf media, Raphael built SurfSort as the tool he always needed on trips. SurfSort is the first product from Lime Studio — with more to come.
     </div>
     <div style="margin-top:24px;">
-      <a href="https://liimestudio.com" style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--lime);text-decoration:none;">
+      <a href="https://liimestudio.com" style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.5px;color:var(--lime);text-decoration:none;">
         liimestudio.com →
       </a>
     </div>
@@ -944,7 +937,7 @@ footer {
       <div class="founder-stat-lbl">Days free trial</div>
     </div>
     <div class="founder-stat">
-      <div class="founder-stat-val" style="font-size:32px;letter-spacing:-1px;">MAC</div>
+      <div class="founder-stat-val" style="font-size:36px;letter-spacing:-1px;">MAC</div>
       <div class="founder-stat-lbl">Native macOS app</div>
     </div>
   </div>
@@ -953,7 +946,7 @@ footer {
 <!-- FINAL CTA -->
 <div id="download" class="cta-section">
   <div class="cta-eyebrow">Download Now</div>
-  <div class="cta-title">STOP WASTING<br>TIME.</div>
+  <div class="cta-title">Stop Wasting<br>Time.</div>
   <a href="#" class="btn-dark">Download for Mac — Free</a>
   <p class="cta-sub">30 days free · No credit card · macOS 12+</p>
 </div>
