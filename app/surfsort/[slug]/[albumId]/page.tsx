@@ -81,7 +81,7 @@ export default async function AlbumPage({ params }: Props) {
       {/* Nav */}
       <nav className="top-nav">
         <Link
-          href={`/surf-sort/${params.slug}`}
+          href={`/surfsort/${params.slug}`}
           className="nav-back"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

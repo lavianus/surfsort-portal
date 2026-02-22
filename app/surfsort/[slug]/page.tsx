@@ -145,7 +145,7 @@ export default async function PortalPage({ params }: Props) {
             {albums.map(album => (
               <Link
                 key={album.id}
-                href={`/surf-sort/${params.slug}/${album.id}`}
+                href={`/surfsort/${params.slug}/${album.id}`}
                 className="album-card"
               >
                 <div className="album-cover">
